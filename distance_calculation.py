@@ -7,8 +7,8 @@ import embedding_distances.interface as interface
 import tables_creating
 
 ####nonso alonzo
-# folder_path = "random tables"
-# download_folder = r"C:\Users\Altar\uni_assingments\Embeddings Demo Project\work-with-OTT-QA\random tables"
+# folder_path = "random_tables"
+# download_folder = r"C:\Users\Altar\uni_assingments\Embeddings Demo Project\work-with-OTT-QA\random_tables"
 #
 # all_data = ["Who created the series in which the character of Robert , played by actor Nonso Anozie , appeared ?"]
 #
@@ -28,7 +28,7 @@ import tables_creating
 #     all_data.append(f"{data}")
 
 ####Sevens_Grand_prix_series_0
-folder_path = "random tables"
+folder_path = "random_tables"
 download_folder = r"C:\Users\Altar\uni_assingments\Embeddings Demo Project\work-with-OTT-QA\random tables"
 
 all_data = ["What did the 2nd championship win at the Sevens Grand Prix Series for the team with the most top 4 finishes qualify them for ?"]
@@ -50,7 +50,7 @@ with open(file_path, "r", encoding="utf-8") as f:
 
 
 
-##adding all the random tables
+##adding all the random_tables
 for filename in os.listdir(download_folder):
     # if filename.endswith(".json"):
     file_path = os.path.join(folder_path, filename)
