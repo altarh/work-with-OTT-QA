@@ -10,7 +10,7 @@ nltk.download('punkt')
 nltk.download('stopwords')
 
 # === Step 1: Load documents from a folder ===
-folder_path = "random_tables"  # Update with your folder path
+folder_path = "1000_random_tables"  # Update with your folder path
 
 documents = []
 for filename in os.listdir(folder_path):
@@ -23,7 +23,7 @@ for filename in os.listdir(folder_path):
 retriever = BM25Retriever.from_documents(documents)
 
 # === Step 3: Preprocess and set search parameters ===
-retriever.k = 50  # number of top documents to retrieve
+retriever.k = 10  # number of top documents to retrieve
 
 # === Step 4: Define your query ===
 query = "What did the 2nd championship win at the Sevens Grand Prix Series qualify the team for?"
