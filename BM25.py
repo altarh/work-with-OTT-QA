@@ -23,7 +23,7 @@ for filename in os.listdir(folder_path):
 retriever = BM25Retriever.from_documents(documents)
 
 # === Step 3: Preprocess and set search parameters ===
-retriever.k = 10  # number of top documents to retrieve
+retriever.k = 50  # number of top documents to retrieve
 
 # === Step 4: Define your query ===
 query = "What did the 2nd championship win at the Sevens Grand Prix Series qualify the team for?"
@@ -33,5 +33,6 @@ results = retriever.get_relevant_documents(query)
 
 print(f"\nTop {len(results)} relevant documents:")
 for i, doc in enumerate(results):
-    print(f"{i+1}. Source: {doc.metadata['source']}")
+    # print(f"{i+1}. Source: {doc.metadata['source']}")
+    print(f"{doc.metadata['source']}")
     # print(doc.page_content[:200] + "...\n")  # Print first 200 characters
