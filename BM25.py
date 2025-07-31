@@ -26,7 +26,8 @@ retriever = BM25Retriever.from_documents(documents)
 retriever.k = 50  # number of top documents to retrieve
 
 # === Step 4: Define your query ===
-query = "What did the 2nd championship win at the Sevens Grand Prix Series qualify the team for?"
+query = "This 70 's Kishore Kumar song was in a film produced by Alankar Chitra and directed by Shanker Mukherjee ?"
+
 
 # === Step 5: Retrieve and display top documents ===
 results = retriever.get_relevant_documents(query)
