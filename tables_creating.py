@@ -95,12 +95,27 @@ questions = [
     "By what nickname is the network that broadcast the ViacomCBS television program , Canon , sometimes known ?"
 ]
 
-download_folder = r'C:\Users\Altar\uni_assingments\Embeddings Demo Project\work-with-OTT-QA\random tables'
+# download_folder = r'C:\Users\Altar\uni_assingments\Embeddings Demo Project\work-with-OTT-QA\random tables'
 # files = ['10,000_metres_0', '10,000_metres_1']
 my_url = 'https://raw.githubusercontent.com/wenhuchen/OTT-QA/master/data/traindev_tables_tok/'
 
 
-def download_all_json_files(base_url, files):
+import json
+
+# Load the file
+with open(r"C:\Users\Altar\uni_assingments\Embeddings Demo Project\work-with-OTT-QA\question_table_map.json", "r", encoding="utf-8") as f:
+    data = json.load(f)
+    print(type(data))
+
+# Extract all "question" values
+questions = list(data.values())
+# Print first few questions
+# for q in questions[:5]:
+#     print(q)
+
+
+download_folder = r'C:\Users\Altar\uni_assingments\Embeddings Demo Project\work-with-OTT-QA\all_gold_tables'
+def download_all_json_files(base_url, files, download_folder):
     for file in files:
         url = base_url + file +".json"
         response = requests.get(url)
@@ -111,3 +126,6 @@ def download_all_json_files(base_url, files):
             print(f"Downloaded {file}")
         else:
             print(f"Failed to download {file}")
+
+
+download_all_json_files(my_url, questions, download_folder)
