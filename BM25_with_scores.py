@@ -7,7 +7,7 @@ import nltk
 nltk.download("punkt")
 
 # Step 1: Load tables and tokenize content
-folder_path = "/shared/mrkouch/OTT-QA/work-with-OTT-QA/2000_random_tables"
+folder_path = "/shared/mrkouch/OTT-QA/work-with-OTT-QA/1000_random_tables"
 corpus = []
 file_names = []
 
