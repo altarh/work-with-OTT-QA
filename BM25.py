@@ -26,7 +26,8 @@ retriever = BM25Retriever.from_documents(documents)
 retriever.k = 50  # number of top documents to retrieve
 
 # === Step 4: Define your query ===
-query = "How many academic staff are at the university in Budapest that has the official abbreviation BME ?"
+query = "This 70 's Kishore Kumar song was in a film produced by Alankar Chitra and directed by Shanker Mukherjee ?"
+
 
 # === Step 5: Retrieve and display top documents ===
 # After retrieving results:
