@@ -1,0 +1,27 @@
+{
+  "table": {
+    "url": "https://en.wikipedia.org/wiki/Budapest_University_of_Technology_and_Economics",
+    "title": "Budapest University of Technology and Economics",
+    "header": [
+      ["Name", []],
+      ["Abbreviation", []],
+      ["Location", []],
+      ["Academic staff", []],
+      ["Students", []]
+    ],
+    "data": [
+      [
+        ["Budapest University of Technology and Economics", ["/wiki/Budapest_University_of_Technology_and_Economics"]],
+        ["BME", []],
+        ["Budapest, Hungary", ["/wiki/Budapest"]],
+        ["1,300", []],
+        ["21,171", []]
+      ]
+    ],
+    "section_title": "Overview",
+    "section_text": "The Budapest University of Technology and Economics (BME) is a public research university located in Budapest, Hungary. It is one of the oldest institutes of technology in the world, having been founded in 1782. BME is considered Hungary's most prestigious technical university.",
+    "uid": "Budapest_University_of_Technology_and_Economics_0",
+    "intro": "The Budapest University of Technology and Economics (BME) is a major institution of higher education in Hungary, specializing in engineering, technology, and economics. It is located in Budapest and is known for its significant contributions to science and technology."
+  },
+  "passage": "The Budapest University of Technology and Economics (BME), located in Budapest, Hungary, is one of the leading technical universities in Central Europe. As of recent data, the university employs approximately 1,300 academic staff members who are engaged in teaching and research across a wide range of engineering, technology, and economic disciplines. BME is recognized for its rigorous academic programs and its role in advancing scientific and technological innovation in Hungary and beyond."
+}
