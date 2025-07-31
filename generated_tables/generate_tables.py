@@ -1,4 +1,6 @@
 from openai import OpenAI
+import os
+from datetime import datetime
 
 # System instructions
 SYSTEM_PROMPT = (
@@ -92,9 +94,21 @@ query: {query}
         max_tokens=2000
     )
 
+    content = response.choices[0].message.content
     print("\n--- GENERATED GOLD ---\n")
-    print(response.choices[0].message.content)
-    return response.choices[0].message.content
+    print(content)
+    # Prepare file path
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    file_name = f"gold_{timestamp}.json"
+    output_dir = 'generated_tables'
+    output_path = os.path.join(output_dir, file_name)
+
+    # Write file
+    with open(output_path, "w", encoding="utf-8") as f:
+        f.write(content)
+
+    print(f"\n✅ Gold saved to: {output_path}")
+    return content
 
 
 # Entry point
