@@ -17,7 +17,7 @@ gold_path = os.path.join(gold_dir, "Nonso_Anozie_1")
 with open(gold_path, "r", encoding="utf-8") as f:
         table_data = json.load(f)
         table_str = json.dumps(table_data)
-        tokens = table_str.split()
+        tokens = table_str.lower().split()
         corpus.append(tokens)
         file_names.append("Nonso_Anozie_1 (gold)")
 
@@ -28,7 +28,7 @@ for filename in os.listdir(folder_path):
     with open(path, "r", encoding="utf-8") as f:
         table_data = json.load(f)
         table_str = json.dumps(table_data)
-        tokens = table_str.split()
+        tokens = table_str.lower().split()
         corpus.append(tokens)
         file_names.append(filename)
 
@@ -37,7 +37,7 @@ bm25 = BM25Okapi(corpus)
 
 # Step 3: Define and tokenize your query
 query = "Who created the series in which the character of Robert , played by actor Nonso Anozie , appeared ?"
-tokenized_query = query.split()
+tokenized_query = query.lower().split()
 
 
 # Step 4: Score all documents
@@ -54,11 +54,11 @@ print("-------------------------------------------------------------------------
 
 generated = None
 generated_dir = "/shared/mrkouch/OTT-QA/work-with-OTT-QA/generated_tables"
-generaed_path = os.path.join(generated_dir, "Nonso_Anozie_1")
-with open(generaed_path, "r", encoding="utf-8") as f:
+generated_path = os.path.join(generated_dir, "Nonso_Anozie_1")
+with open(generated_path, "r", encoding="utf-8") as f:
         table_data = json.load(f)
         table_str = json.dumps(table_data)
-        generated = table_str.split()
+        generated = table_str.lower().split()
 
 scores_2 = bm25.get_scores(generated)
 ranked_2 = sorted(zip(file_names, scores_2), key=lambda x: x[1], reverse=True)[:50]
