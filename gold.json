@@ -62523,42 +62523,6 @@
     ]
   },
   {
-    "question_id": "cc2a12f824d88a4d",
-    "question": "How many NFL teams did the celebrity football player who participated in season three of Rachael vs . Guy : Celebrity Cook-Off play for ?",
-    "table_id": "Rachael_vs._Guy:_Celebrity_Cook-Off_2",
-    "answer-text": "four",
-    "question_postag": "WRB JJ NNP NNS VBD DT NN NN NN WP VBD IN NN CD IN NNP NN . NN : NN NNP NN IN .",
-    "answer-node": [
-      [
-        "Chris Kattan",
-        [
-          0,
-          0
-        ],
-        "/wiki/Chris_Kattan",
-        "passage"
-      ],
-      [
-        "Tiffany (American singer)",
-        [
-          5,
-          0
-        ],
-        "/wiki/Tiffany_(American_singer)",
-        "passage"
-      ],
-      [
-        "NFL",
-        [
-          7,
-          1
-        ],
-        "/wiki/NFL",
-        "passage"
-      ]
-    ]
-  },
-  {
     "question_id": "dacffbf79244444c",
     "question": "Who started the post-war Dinky Toys company with the second-oldest model ?",
     "table_id": "Dinky_Toys_0",
